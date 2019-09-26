@@ -29,7 +29,7 @@ Things you may want to cover:
 |city|string|null: false|
 |block_number|string|null: false|
 |building|string||
-|phone_number|string||
+|phone_number|string|null: false|
 
 ### Association
 - has_many :items
@@ -77,7 +77,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |image|integer||
-|user_id|integer|null: false|
+|user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -104,8 +104,8 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |text|text||
-|item_id|integer|null: false|
-|user_id|integer|null: false|
+|item_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -115,8 +115,8 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |text|text||
-|item_id|integer|null: false|
-|user_id|integer|null: false|
+|item_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
